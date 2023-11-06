@@ -1,0 +1,59 @@
+\documentclass[DIN, pagenumber=false, fontsize=11pt, parskip=half]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\setlength{\parindent}{0em}
+
+% set section in CM
+\setkomafont{section}{\normalfont\bfseries\Large}
+
+\renewcommand{\title}[1]{{\noindent\Large\textbf{#1}}}
+
+
+%===================================
+\begin{document}
+
+\noindent\textbf{Algorithms for Datascience} \hfill \textbf{Universität Bonn}\\
+WS23/24 \hfill \\
+Felix Lehmann \\
+... \\
+
+\title{Assignment Sheet X \hfill \today}
+
+%===================================
+\section*{Assignment 1}
+
+Each item can be in exactly on of three places for a association rule,
+\begin{enumerate}
+    \item left hand side,
+    \item right hand side,
+    \item not part of the rule.
+\end{enumerate}
+
+Therefore this gives an upper limit for the number of rules to be $3^d$.
+
+From these we have to subtract nonsensical cases where one of the side of the left or right hand side are emtpy.
+This are $2 \times 2^d = 2^{d+1}$ cases.
+
+The case where both sides are emtpy has now been subtraced twice so we have to add back $1$.
+
+Levaing us with the formula:
+\begin{equation*}
+    3^d - 2^{d+1} + 1
+\end{equation*}
+
+%===================================
+\section*{Assignment 2}
+
+
+
+%===================================
+\section*{Assignment 3}
+
+\end{document}
